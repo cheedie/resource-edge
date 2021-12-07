@@ -92,6 +92,9 @@ Navbar
   justify-content: space-between;
   height: 5rem;
   background-color: var(--white);
+  /* position: fixed;
+  width: 100%;
+  z-index: 2; */
 }
 
 .nav-center {
@@ -156,7 +159,6 @@ Hero
 .hero-center {
   display: grid;
   gap: 1rem;
-  padding-top: 2.5rem;
 }
 
 .hero-text h1 {
@@ -192,6 +194,7 @@ Hr
   border-radius: 16px;
   padding: 2rem;
 }
+
 .hr-detail h2 {
   font-size: 1.1rem;
   padding-top: 1.8rem;
@@ -199,6 +202,68 @@ Hr
 .hr-detail p {
   padding-top: 0.5rem;
   font-size: 0.8rem;
+}
+
+/* 
+=============
+Admin
+==========
+ */
+
+.admin-container {
+  background: var(--white);
+  padding: 3.8rem 0;
+}
+.admin-header {
+  display: grid;
+  gap: 2rem;
+  padding-bottom: 5rem;
+}
+.travel-section {
+  padding-left: 1.85rem;
+}
+
+.travel-section h2 {
+  font-size: 1.185rem;
+  padding-top: 1.8rem;
+}
+.company-logo {
+  display: grid;
+  grid-template-rows: repeat(autofill, minmax(100px, 1fr));
+  gap: 3rem;
+}
+
+.footer-container {
+  background: var(--textColor);
+  padding: 3.2rem 1.5rem;
+}
+
+.footer-logo {
+  color: var(--white);
+  text-align: center;
+}
+.footer-section {
+  display: grid;
+  gap: 4rem;
+}
+.social-icons {
+  margin: 0 auto;
+}
+
+.social-icons a {
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+.social-icons a:first-child {
+  padding-left: 2rem;
+}
+
+.copy-right {
+  display: block;
+  padding-top: 3rem;
+  color: var(--white);
+  text-align: center;
+  line-height: var(--lineHeight);
 }
 
 @media screen and (min-width: 800px) {
@@ -280,17 +345,14 @@ Hero
 
   .hero-center {
     grid-template-columns: 420px 2fr;
-  }
-
-  .hero-center {
-    padding-top: 3rem;
+    padding-top: 1.5rem;
   }
 
   .hero-text {
     padding: 6rem 0;
   }
   .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     line-height: 47px;
     text-transform: none;
   }
@@ -306,5 +368,34 @@ Hr
 
   .hr-details-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* 
+=============
+Admin
+==========
+ */
+
+  .admin-header {
+    grid-template-columns: 1fr 250px 250px;
+  }
+  .admin-section {
+    padding-top: 3rem;
+  }
+  .travel-section h2 {
+    font-size: 1.3rem;
+  }
+  .travel-section p {
+    max-width: 12rem;
+  }
+  .company-logo {
+    grid-template-columns: repeat(4, auto);
+  }
+  .footer-section {
+    grid-template-columns: 1fr 300px;
+  }
+
+  .footer-logo {
+    text-align: start;
   }
 }
