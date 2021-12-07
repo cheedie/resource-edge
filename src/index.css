@@ -5,22 +5,22 @@
   margin: 0;
   padding: 0;
 }
+@import url(//db.onlinewebfonts.com/c/961a181da27e7cbc072ec2fb5bbfe2a9?family=Circular+Std);
 
 /* Global Style */
-
 :root {
   --textColor: #091e42;
+  --paragraphTextColor: #5e6c84;
   --blueColor: #0052cc;
+  --greyBg: #f4f5f7;
   --greyColor: #a5adba;
-  --fontFamily: Circular Std;
+  --fontFamily: "Circular Std";
   --black: #222;
   --white: #ffffff;
   --red-light: #f8d7da;
   --red-dark: #842029;
   --green-light: #d1e7dd;
   --green-dark: #0f5132;
-  --bodyFont: "Karla", sans-serif;
-  --backgroundColor: --white;
   --borderRadius: 4px;
   --letterSpacing: 1px;
   --lineHeight: 24px;
@@ -64,6 +64,23 @@ ul {
   margin: 0 auto;
   /* max-width: var(--maxWidth); */
 }
+.title {
+  color: var(--textColor);
+  font-family: var(--fontFamily);
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: var(--lineHeight);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
+}
+
+.paragraph-text {
+  padding-top: 1rem;
+  color: var(--paragraphTextColor);
+  font-size: 1rem;
+  /* font-family: var(--fontFamily); */
+  line-height: var(--lineHeight);
+}
 
 /* 
 =============
@@ -73,7 +90,7 @@ Navbar
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  height: 4rem;
+  height: 5rem;
   background-color: var(--white);
 }
 
@@ -133,26 +150,69 @@ Hero
  */
 
 .hero-section {
-  min-height: calc(100vh - 4rem);
+  min-height: calc(100vh - 5rem);
   background: var(--white);
 }
 .hero-center {
-  display: flex;
-  flex-direction: column;
-}
-.hero-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  gap: 1rem;
+  padding-top: 2.5rem;
 }
 
-.hero-photo {
-  width: 30rem;
+.hero-text h1 {
+  font-size: 2rem;
+  line-height: 42px;
+  text-transform: none;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  max-width: 15rem;
+}
+
+/* 
+=============
+Hr
+==========
+ */
+
+.hr-container {
+  background: var(--greyBg);
+  padding: 3.8rem 0;
+}
+
+.hr-details-container {
+  display: grid;
+  gap: 2rem;
+  margin: 3.5rem 0;
+}
+.hr-detail {
+  background: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 16px;
+  padding: 2rem;
+}
+.hr-detail h2 {
+  font-size: 1.1rem;
+  padding-top: 1.8rem;
+}
+.hr-detail p {
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
 }
 
 @media screen and (min-width: 800px) {
   .section-center {
     width: 80vw;
+  }
+  .title {
+    font-size: 2rem;
+  }
+
+  .paragraph-text {
+    font-size: 0.85rem;
+    max-width: 23rem;
+    padding-top: 1.7rem;
   }
   /* 
 =============
@@ -219,13 +279,32 @@ Hero
  */
 
   .hero-center {
-    flex-direction: row;
+    grid-template-columns: 420px 2fr;
   }
+
+  .hero-center {
+    padding-top: 3rem;
+  }
+
   .hero-text {
-    width: 30%;
-    border: 1px solid red;
+    padding: 6rem 0;
   }
-  .hero-img {
-    width: 68%;
+  .hero-text h1 {
+    font-size: 2.5rem;
+    line-height: 47px;
+    text-transform: none;
+  }
+  .hero-text p {
+    max-width: 20rem;
+  }
+
+  /* 
+=============
+Hr
+==========
+ */
+
+  .hr-details-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
