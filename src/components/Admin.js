@@ -71,10 +71,14 @@ const Admin = () => {
           <img src={payrollImg} alt="" className="img" />
         </section>
         <section className="company-logo">
-          <img src={unnLogo} alt="" />
-          <img src={tenenceLogo} alt="" />
-          <img src={privateEstateLogo} alt="" />
-          <img src={genesysLogo} alt="" />
+          <div>
+            <img src={unnLogo} alt="" />
+            <img src={genesysLogo} alt="" />
+          </div>
+          <div>
+            <img src={privateEstateLogo} alt="" />
+            <img src={tenenceLogo} alt="" />
+          </div>
         </section>
       </div>
     </main>
