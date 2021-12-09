@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/Logo.svg";
 import mobileLogo from "../assets/re-logo.svg";
 import menuBtn from "../assets/menu.svg";
@@ -39,12 +40,12 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="nav-btn-container">
-            <button type="submit" className="btn sign-up-btn">
+            <Link className="btn sign-up-btn" to="/login">
               sign up
-            </button>
-            <button type="submit" className="btn sign-in-btn">
+            </Link>
+            <Link className="btn sign-in-btn" to="/login">
               sign in
-            </button>
+            </Link>
           </div>
         </div>
       </div>

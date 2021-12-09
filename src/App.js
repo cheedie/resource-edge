@@ -1,19 +1,28 @@
 import logo from "./logo.svg";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Hr from "./components/Hr";
-import Admin from "./components/Admin";
-import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Password from "./components/Password";
+import ResetPassword from "./components/ResetPassword";
+import ResetPasswordSuccessful from "./components/ResetPasswordSuccessful";
 import DashBoard from "./components/Dashboard";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Hr />
-      <Admin />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" exact={true} element={<Home />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/password" element={<Password />}></Route>
+          <Route path="/resetpassword" element={<ResetPassword />}></Route>
+          <Route
+            path="/resetpasswordsuccessful"
+            element={<ResetPasswordSuccessful />}
+          ></Route>
+          <Route path="/dashboard" element={<DashBoard />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import footerLogo from "../assets/Logo.svg";
+import footerLogo from "../assets/footer-logo.svg";
 import facebookIcon from "../assets/facebook.svg";
 import twitterIcon from "../assets/twitter.svg";
 import linkedinIcon from "../assets/linkedin.svg";
