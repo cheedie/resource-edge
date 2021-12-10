@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="hero-section">
       <div className="section-center hero-center">
         <div className="hero-text">
-          <h1 className="title">
+          <h1 className="title" style={{ maxWidth: "500px" }}>
             Throw paperwork into the trash where it belongs.
           </h1>
           <p className="paragraph-text">
@@ -15,7 +15,7 @@ const Hero = () => {
           </p>
         </div>
         <div className="hero-img">
-          <img src={heroImg} alt="" className="hero-photo img" />
+          <img src={heroImg} alt="" className="img" />
         </div>
       </div>
     </section>

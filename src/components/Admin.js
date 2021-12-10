@@ -1,14 +1,16 @@
 import React from "react";
-import travelIcon from "../assets/travel.svg";
-import assetIcon from "../assets/asset.svg";
-import travelDetailsImg from "../assets/travel-details.svg";
-import voucherIcon from "../assets/vouchers.svg";
-import payrollIcon from "../assets/payroll.svg";
-import payrollImg from "../assets/payroll-details.svg";
 import unnLogo from "../assets/unn-img.svg";
 import tenenceLogo from "../assets/tenence-img.svg";
 import genesysLogo from "../assets/genesys-img.svg";
 import privateEstateLogo from "../assets/private-estate-img.svg";
+import {
+  Travel,
+  Asset,
+  TravelDetails,
+  Vouchers,
+  Payroll,
+  PayrollDetails,
+} from "../assets";
 
 const Admin = () => {
   return (
@@ -23,7 +25,8 @@ const Admin = () => {
             </p>
           </div>
           <div className="travel-section">
-            <img src={travelIcon} alt="" />
+            <Travel />
+
             <h2 className="title">Travel & Logistics</h2>
             <p className="paragraph-text">
               Make travel requests, get approvals, and have access to travel
@@ -31,7 +34,7 @@ const Admin = () => {
             </p>
           </div>
           <div className="travel-section">
-            <img src={assetIcon} alt="" />
+            <Asset />
             <h2 className="title">Asset Management</h2>
             <p className="paragraph-text">
               Manage the acquisition, assignment, and disposition of assets
@@ -40,7 +43,7 @@ const Admin = () => {
           </div>
         </section>
         <section className="travel-details-img">
-          <img src={travelDetailsImg} alt="" className="img" />
+          <TravelDetails className="img" />
         </section>
         <section className="admin-header">
           <div className="admin-section">
@@ -51,7 +54,7 @@ const Admin = () => {
             </p>
           </div>
           <div className="travel-section">
-            <img src={voucherIcon} alt="" />
+            <Vouchers />
             <h2 className="title">RE Vouchers</h2>
             <p className="paragraph-text">
               Track and manage expenditure for multiple teams across your
@@ -59,7 +62,8 @@ const Admin = () => {
             </p>
           </div>
           <div className="travel-section">
-            <img src={payrollIcon} alt="" />
+            <Payroll />
+
             <h2 className="title">Payroll</h2>
             <p className="paragraph-text">
               Our easy to use systems takes away the pain of managing complex
@@ -68,7 +72,7 @@ const Admin = () => {
           </div>
         </section>
         <section className="travel-details-img">
-          <img src={payrollImg} alt="" className="img" />
+          <PayrollDetails className="img" />
         </section>
         <section className="company-logo">
           <div>

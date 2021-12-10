@@ -1,7 +1,10 @@
 import React from "react";
-import employeeIcon from "../assets/employee-management.svg";
-import performanceIcon from "../assets/performance-management.svg";
-import timeIcon from "../assets/time-off.svg";
+import {
+  EmployeeDirectory,
+  EmployeeManagement,
+  PerformanceManagement,
+  TimeOff,
+} from "../assets";
 import employeeDirectory from "../assets/employee-directory.svg";
 const Hr = () => {
   return (
@@ -16,7 +19,7 @@ const Hr = () => {
         </section>
         <section className="hr-details-container">
           <div className="hr-detail">
-            <img src={employeeIcon} alt="" />
+            <EmployeeManagement />
             <h2 className="title">Employee Management</h2>
             <p className="paragraph-text">
               From Hiring & Onboarding to Retiring, the Resource Edge Employee
@@ -25,7 +28,7 @@ const Hr = () => {
             </p>
           </div>
           <div className="hr-detail">
-            <img src={performanceIcon} alt="" />
+            <PerformanceManagement />
             <h2 className="title">Performance Management</h2>
             <p className="paragraph-text">
               Manage and track employee performance with our easy-to-use tools
@@ -33,7 +36,7 @@ const Hr = () => {
             </p>
           </div>
           <div className="hr-detail">
-            <img src={timeIcon} alt="" />
+            <TimeOff />
             <h2 className="title">Paid time off</h2>
             <p className="paragraph-text">
               Employees can request for paid time off, vacations, sick leaves or
@@ -43,7 +46,7 @@ const Hr = () => {
           </div>
         </section>
         <div className="employee-directory">
-          <img src={employeeDirectory} alt="" className="employee-img img" />
+          <img src={employeeDirectory} alt="" className="img" />
         </div>
       </div>
     </main>

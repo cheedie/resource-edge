@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import loginLogo from "../assets/login-logo.svg";
+import { LoginLogo } from "../assets";
+
 const Login = () => {
   const handleClick = (e) => {};
   return (
     <section className="login-container" style={{ paddingTop: "1rem" }}>
       <div className="login-title">
-        <img src={loginLogo} alt="" />
+        <LoginLogo className="login-svg" />
       </div>
-      <div className="form-container" style={{ marginTop: "2rem" }}>
+      <div className="form-container" style={{ marginTop: "1.5rem" }}>
         <div className="form-title">
           <h5 className="title">Log in</h5>
           <p className="paragraph-text" style={{ paddingBottom: "1rem" }}>
