@@ -57,7 +57,7 @@ ul {
   transition: var(--transition);
   text-transform: capitalize;
   display: inline-block;
-  font-family: var(--fontFamily);
+  /* font-family: var(--fontFamily); */
   font-weight: 500;
   font-size: 1rem;
   line-height: var(--lineHeight);
@@ -71,14 +71,28 @@ ul {
   margin: 0 auto;
 }
 
-.title {
+.title,
+.dashboard-title {
   color: var(--textColor);
   font-family: var(--fontFamily);
-  font-size: 1.25rem;
-  font-weight: bold;
-  line-height: var(--lineHeight);
-  letter-spacing: var(--letterSpacing);
   text-transform: capitalize;
+}
+.title {
+  font-size: 1.25rem;
+  letter-spacing: var(--letterSpacing);
+  line-height: var(--lineHeight);
+  font-weight: bold;
+}
+.dashboard-title {
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 40px;
+}
+.dashboard-paragraph {
+  color: #000000;
+  font-size: 14px;
+  line-height: 14px;
+  padding-top: 0.5rem;
 }
 
 .paragraph-text {
@@ -457,7 +471,6 @@ Dashboard
  */
 
 .dashboard-section {
-  min-height: 100vh;
   background: var(--white);
 }
 
@@ -468,7 +481,7 @@ Dashboard
 }
 
 .dashboard-section-center {
-  width: 90vw;
+  width: 95vw;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -492,8 +505,32 @@ Dashboard
   display: flex;
   justify-content: flex-end;
 }
-/* .dashboard-user-details {
-} */
+.dashboard-user-details {
+  width: 90vw;
+  margin: 10rem auto;
+}
+
+.employee-details-container {
+  background: var(--white);
+  border: 1px solid #dddddd;
+  border-radius: var(--borderRadius);
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.employee-details-content {
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.resume-btn {
+  background: rgba(9, 30, 66, 0.04);
+  color: #42526e;
+  font-size: 0.85rem;
+  font-weight: 300;
+}
 
 @media screen and (min-width: 800px) {
   .section-center {
@@ -502,11 +539,19 @@ Dashboard
   .title {
     font-size: 1.5rem;
   }
+  .dashboard-title {
+    font-size: 35px;
+    line-height: 50px;
+  }
 
   .paragraph-text {
     font-size: 0.95rem;
     max-width: 23rem;
     padding-top: 1.7rem;
+  }
+  .dashboard-paragraph {
+    font-size: 16px;
+    line-height: 16px;
   }
   /* 
 =============
@@ -652,5 +697,11 @@ Admin
   }
   .dashboard-header {
     width: 24%;
+  }
+  .dashboard-user-details {
+    width: 75vw;
+  }
+  .employee-details-container {
+    padding: 1.5rem;
   }
 }
