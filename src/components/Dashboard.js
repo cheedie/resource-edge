@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import menu from "../assets/dashboard-menu.svg";
 import logo from "../assets/Logo.svg";
-import { Avatar, DashboardMenu, Logo, CirclEmpty } from "../assets";
+import {
+  Avatar,
+  DashboardMenu,
+  Logo,
+  CirclEmpty,
+  Check,
+  TalentManager,
+  Employee,
+} from "../assets";
 
 const Dashboard = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className="dashboard-section">
       <div className="nav-dashboard">
@@ -28,8 +38,45 @@ const Dashboard = () => {
               TM Dashboard
             </h6>
           </div>
-          <div className="avatar-container">
+          <div
+            className="avatar-container"
+            onClick={() => setIsModalOpen(!isModalOpen)}
+          >
             <Avatar />
+            {isModalOpen && (
+              <div className="drop-down-overlay">
+                <div className="drop-down-content">
+                  <div className="drop-down-center">
+                    <h6>OSITADINMA NWANGWU</h6>
+                    <p>Profile</p>
+                  </div>
+
+                  <div className="drop-down-center">
+                    <h6>Use Resource Edge as</h6>
+                    <div className="designation-container">
+                      <div>
+                        <TalentManager />
+                        <h5>Talent Manager</h5>
+                      </div>
+                      <Check />
+                    </div>
+                    <div className="designation-container">
+                      <Employee />
+                      <h5>Employee</h5>
+                    </div>
+                  </div>
+                  <hr
+                    style={{
+                      border: "1px solid #E5E5E5",
+                      marginBottom: "1.5rem",
+                    }}
+                  />
+                  <Link to="/" className="drop-down-center log-out-btn">
+                    Logout
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

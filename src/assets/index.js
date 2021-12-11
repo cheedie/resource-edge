@@ -8,6 +8,7 @@ import { ReactComponent as Cross } from "./cross.svg";
 import { ReactComponent as DashboardMenu } from "./dashboard-menu.svg";
 import { ReactComponent as EditFilled } from "./edit-filled.svg";
 import { ReactComponent as EmployeeAvatar } from "./Employee-avatar.svg";
+import { ReactComponent as Employee } from "./Employee.svg";
 import { ReactComponent as EmployeeManagement } from "./employee-management.svg";
 import { ReactComponent as Facebook } from "./facebook.svg";
 import { ReactComponent as FooterLogo } from "./footer-logo.svg";
@@ -43,6 +44,7 @@ export {
   EditFilled,
   EmployeeAvatar,
   EmployeeManagement,
+  Employee,
   Facebook,
   FooterLogo,
   Instagram,

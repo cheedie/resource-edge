@@ -504,6 +504,7 @@ Dashboard
   width: 10%;
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
 }
 .dashboard-user-details {
   width: 90vw;
@@ -530,6 +531,51 @@ Dashboard
   color: #42526e;
   font-size: 0.85rem;
   font-weight: 300;
+}
+.drop-down-overlay {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  left: auto;
+  margin-top: 0.9rem;
+  width: 20rem;
+  padding-top: 3.5rem;
+}
+.drop-down-content {
+  background: var(--white);
+  border: 1px solid --white;
+  box-shadow: var(--shadow-2);
+  border-radius: 3px;
+  padding: 2rem 0;
+}
+.drop-down-center {
+  padding-left: 1rem;
+}
+
+.drop-down-center h6 {
+  color: #6b778c;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 12px;
+}
+
+.drop-down-center p {
+  color: #172b4d;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 1rem 0 1.5rem 0;
+}
+
+.designation-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.log-out-btn {
+  color: #172b4d;
+  font-size: 14px;
+  font-weight: 450;
 }
 
 @media screen and (min-width: 800px) {
