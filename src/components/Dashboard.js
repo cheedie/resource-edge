@@ -11,9 +11,8 @@ const Dashboard = () => {
       <div className="nav-dashboard">
         <div className="dashboard-section-center">
           <div className="dashboard-header">
-            <img src={menu} alt="" />
+            <img src={menu} alt=""  />
             <img src={logo} alt="" />
-
             <div
               style={{ borderLeft: "1.5px solid #C1C7D0", height: "1.5rem" }}
             ></div>
