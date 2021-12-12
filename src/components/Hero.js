@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="hero-section">
       <div className="section-center hero-center">
         <div className="hero-text">
-          <h1 className="title" style={{ maxWidth: "500px" }}>
+          <h1 className="title">
             Throw paperwork into the trash where it belongs.
           </h1>
           <p className="paragraph-text">

@@ -19,29 +19,27 @@ const Password = () => {
             <h5 className="title">Ositadinma Nwangwu</h5>
             <EditFilled />
           </div>
-
           <p className="paragraph-text">o.nwangwu@genesystechhub.com</p>
         </div>
         <form action="">
           <label htmlFor="password" className="form-label">
             Password
           </label>
-          <div>
+          <div onClick={() => setToggle(!toggle)} className="input-container">
             <input
               type="password"
               name="password"
               id=""
               autoComplete="on"
               placeholder="Enter password"
-              className="form-input input-container"
+              className="form-input"
             />
-            {/* <div onClick={() => setToggle(!toggle)}>
-            <img src={toggle? watch : close } alt="" className="watch-icon" />
-<Watch  />
-            </div> */}
-            <div onClick={() => setToggle(!toggle)} className="watch-icon">
-              {toggle ? <WatchFilled /> : <Watch />}
-            </div>
+
+            {toggle ? (
+              <WatchFilled className="watch-icon" />
+            ) : (
+              <Watch className="watch-icon" />
+            )}
           </div>
 
           <div className="login-btn-container">
