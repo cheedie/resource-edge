@@ -18,17 +18,15 @@ import { ReactComponent as LoginBg } from "./login-bg.svg";
 import { ReactComponent as LoginLogo } from "./login-logo.svg";
 import { ReactComponent as Logo } from "./Logo.svg";
 import { ReactComponent as Menu } from "./menu.svg";
-import { ReactComponent as PayrollDetails } from "./payroll-details.svg";
 import { ReactComponent as Payroll } from "./payroll.svg";
 import { ReactComponent as ReLogo } from "./re-logo.svg";
 import { ReactComponent as TalentManager } from "./Talent-manager.svg";
-import { ReactComponent as TenenceImg } from "./tenence-img.svg";
 import { ReactComponent as TimeOff } from "./time-off.svg";
-import { ReactComponent as TravelDetails } from "./travel-details.svg";
 import { ReactComponent as Travel } from "./travel.svg";
 import { ReactComponent as Twitter } from "./twitter.svg";
 import { ReactComponent as Vouchers } from "./vouchers.svg";
 import { ReactComponent as Watch } from "./watch.svg";
+import { ReactComponent as Error } from "./error.svg";
 import { ReactComponent as WatchFilled } from "./watch-filled.svg";
 import { ReactComponent as PerformanceManagement } from "./performance-management.svg";
 
@@ -42,6 +40,7 @@ export {
   Cross,
   DashboardMenu,
   EditFilled,
+  Error,
   EmployeeAvatar,
   EmployeeManagement,
   Employee,
@@ -53,13 +52,11 @@ export {
   LoginLogo,
   Logo,
   Menu,
-  PayrollDetails,
   Payroll,
   PerformanceManagement,
   ReLogo,
   TalentManager,
   TimeOff,
-  TravelDetails,
   Travel,
   Twitter,
   Vouchers,

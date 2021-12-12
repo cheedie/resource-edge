@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  EmployeeDirectory,
-  EmployeeManagement,
-  PerformanceManagement,
-  TimeOff,
-} from "../assets";
+import { EmployeeManagement, PerformanceManagement, TimeOff } from "../assets";
 import employeeDirectory from "../assets/employee-directory.svg";
 const Hr = () => {
   return (

@@ -3,14 +3,9 @@ import unnLogo from "../assets/unn-img.svg";
 import tenenceLogo from "../assets/tenence-img.svg";
 import genesysLogo from "../assets/genesys-img.svg";
 import privateEstateLogo from "../assets/private-estate-img.svg";
-import {
-  Travel,
-  Asset,
-  TravelDetails,
-  Vouchers,
-  Payroll,
-  PayrollDetails,
-} from "../assets";
+import { Travel, Asset, Vouchers, Payroll } from "../assets";
+import travelDetails from "../assets/travel-details.svg";
+import payrollDetails from "../assets/payroll-details.svg";
 
 const Admin = () => {
   return (
@@ -43,7 +38,7 @@ const Admin = () => {
           </div>
         </section>
         <section className="travel-details-img">
-          <TravelDetails className="img" />
+          <img src={travelDetails} alt="travel details" className="img" />
         </section>
         <section className="admin-header">
           <div className="admin-section">
@@ -72,7 +67,7 @@ const Admin = () => {
           </div>
         </section>
         <section className="travel-details-img">
-          <PayrollDetails className="img" />
+          <img src={payrollDetails} alt="" className="img" />
         </section>
         <section className="company-logo">
           <div>

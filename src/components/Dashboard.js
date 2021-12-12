@@ -2,15 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import menu from "../assets/dashboard-menu.svg";
 import logo from "../assets/Logo.svg";
-import {
-  Avatar,
-  DashboardMenu,
-  Logo,
-  CirclEmpty,
-  Check,
-  TalentManager,
-  Employee,
-} from "../assets";
+import { Avatar, CirclEmpty, Check, TalentManager, Employee } from "../assets";
 
 const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,8 +13,6 @@ const Dashboard = () => {
           <div className="dashboard-header">
             <img src={menu} alt="" />
             <img src={logo} alt="" />
-            {/* <DashboardMenu />
-            <Logo /> */}
 
             <div
               style={{ borderLeft: "1.5px solid #C1C7D0", height: "1.5rem" }}
@@ -31,8 +21,7 @@ const Dashboard = () => {
             <h6
               style={{
                 color: "#091E42",
-                fontSize: "0.8rem",
-                fontWeight: "300",
+                fontSize: "12px",
               }}
             >
               TM Dashboard
@@ -54,13 +43,24 @@ const Dashboard = () => {
                   <div className="drop-down-center">
                     <h6>Use Resource Edge as</h6>
                     <div className="designation-container">
-                      <div>
+                      <div
+                        style={{
+                          display: "flex",
+                          paddingBottom: "1rem",
+                          alignItems: "center",
+                        }}
+                      >
                         <TalentManager />
                         <h5>Talent Manager</h5>
                       </div>
-                      <Check />
+                      <Check className="" />
                     </div>
-                    <div className="designation-container">
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                      }}
+                    >
                       <Employee />
                       <h5>Employee</h5>
                     </div>
@@ -68,7 +68,7 @@ const Dashboard = () => {
                   <hr
                     style={{
                       border: "1px solid #E5E5E5",
-                      marginBottom: "1.5rem",
+                      margin: "1.5rem 0",
                     }}
                   />
                   <Link to="/" className="drop-down-center log-out-btn">
@@ -81,12 +81,12 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="dashboard-user-details">
-        <h1 className="dashboard-title">Hello, Ositadinma Nwangwu</h1>
+        <h2 className="dashboard-title">Hello, Ositadinma Nwangwu</h2>
         <p className="dashboard-paragraph">
           Welcome and good to have you back.
         </p>
         <div style={{ marginTop: "2.5rem" }}>
-          <h4 className="title">Things to do</h4>
+          <h4 className="dashboard-title">Things to do</h4>
           <div className="employee-details-container">
             <div className="employee-details-content">
               <CirclEmpty className="circle-empty" />
@@ -94,6 +94,7 @@ const Dashboard = () => {
                 className="dashboard-paragraph"
                 style={{
                   paddingLeft: "1rem",
+                  lineHeight: "20px",
                 }}
               >
                 Upload your employee performance agreement
@@ -105,6 +106,7 @@ const Dashboard = () => {
               style={{
                 color: "#0052CC",
                 background: "transparent",
+                fontSize: "14px",
               }}
             >
               Begin
