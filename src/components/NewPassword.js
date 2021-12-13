@@ -89,7 +89,7 @@ const NewPassword = () => {
             {confirmError && (
               <span className="error-msg">
                 <Error text="" />
-                <p>Confrim password doesnt match</p>
+                <p>Confrim password doesn't match</p>
               </span>
             )}
           </div>
