@@ -190,13 +190,14 @@ Navbar
 }
 .nav-btn-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 .sign-in-btn {
   background: var(--blueColor);
   color: var(--white);
-  margin-top: 1.2rem;
+  margin-top: 7rem;
+  /* margin-top: 1.2rem; */
   text-align: center;
 }
 .sign-in-btn:hover {
@@ -206,7 +207,7 @@ Navbar
 .sign-up-btn {
   color: var(--greyColor);
   background: var(--btnGreyColor);
-  margin-top: 7rem;
+  margin-top: 1.2rem;
   text-align: center;
 }
 .sign-up-btn:hover {
@@ -627,7 +628,9 @@ Dashboard
 .error-msg p {
   padding-left: 0.4rem;
 }
-
+.error {
+  border: 1px solid var(--alert);
+}
 @media screen and (min-width: 800px) {
   .section-center {
     width: 80vw;

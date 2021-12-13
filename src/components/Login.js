@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { LoginLogo } from "../assets";
+import { useNavigate } from "react-router-dom";
+import { LoginLogo, FormCheck, Error } from "../assets";
 
 const Login = () => {
-  const handleClick = (e) => {};
+  const [error, setError] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const navigate = useNavigate();
+
+  const validateEmail = (value) => {
+    const checker = /\S+@\S+\.\S+/;
+    if (checker.test(value)) {
+      setError(false);
+      setIsChecked(true);
+      setEmail("");
+    } else {
+      setIsChecked(false);
+    }
+  };
+
+  const handleSubmit = () => {
+    if (!error && isChecked) {
+      navigate("/password");
+    } else {
+      setError(true);
+    }
+  };
+
   return (
     <section className="login-container" style={{ paddingTop: "1rem" }}>
       <div className="login-title">
@@ -16,21 +41,35 @@ const Login = () => {
             Access your resource edge account
           </p>
         </div>
-        <form action="">
+        <form>
           <label htmlFor="email" className="form-label">
             Email Address
           </label>
-          <input
-            type="email"
-            name="email"
-            id=""
-            autoComplete="on"
-            onClick={handleClick}
-            placeholder="Enter email"
-            className="form-input"
-          />
+          <div className="input-container">
+            <input
+              type="email"
+              name="email"
+              id=""
+              autoComplete="on"
+              onChange={(e) => validateEmail(e.target.value)}
+              placeholder="Enter email"
+              className={`form-input ${error ? "error" : ""}`}
+            />
+            {isChecked && <FormCheck className="watch-icon" />}
+          </div>
+
+          {error && (
+            <span className="error-msg">
+              <Error />
+              <p>Enter email address</p>
+            </span>
+          )}
           <div className="login-btn-container">
-            <Link to="/password" className="btn btn-block sign-up-btn"></Link>
+            <button
+              className="btn btn-block sign-up-btn"
+              disabled={error}
+              onClick={handleSubmit}
+            ></button>
 
             <hr
               style={{

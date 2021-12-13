@@ -10,7 +10,7 @@ const RecoveryMail = () => {
       </div>
       <div className="form-container" style={{ marginTop: "1.5rem" }}>
         <div className="form-title">
-          <h6 className="title">Reset Password</h6>
+          <h5 className="title">Reset Password</h5>
           <CheckCircle style={{ marginTop: "2rem" }} />
 
           <p

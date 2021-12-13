@@ -1,9 +1,23 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Watch, EditFilled, LoginLogo, WatchFilled } from "../assets";
+import { Watch, EditFilled, LoginLogo, WatchFilled, Error } from "../assets";
+import { useNavigate } from "react-router-dom";
 
 const Password = () => {
   const [toggle, setToggle] = useState(false);
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
+
+  const navigate = useNavigate();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (password === "") {
+      setError(true);
+    } else {
+      navigate("/dashboard");
+    }
+  };
+
   return (
     <section className="login-container">
       <div className="login-title">
@@ -25,25 +39,39 @@ const Password = () => {
           <label htmlFor="password" className="form-label">
             Password
           </label>
-          <div onClick={() => setToggle(!toggle)} className="input-container">
+          <div className="input-container">
             <input
-              type="password"
+              type={toggle ? "text" : "password"}
               name="password"
               id=""
               autoComplete="on"
               placeholder="Enter password"
-              className="form-input"
+              className={`form-input ${error ? "error" : ""}`}
+              onChange={(e) => {
+                setPassword(e.target.value);
+                setError(false);
+              }}
             />
-
-            {toggle ? (
-              <WatchFilled className="watch-icon" />
-            ) : (
-              <Watch className="watch-icon" />
+            <span onClick={() => setToggle(!toggle)}>
+              {toggle ? (
+                <WatchFilled className="watch-icon" />
+              ) : (
+                <Watch className="watch-icon" />
+              )}
+            </span>
+            {error && (
+              <span className="error-msg">
+                <Error />
+                <p>Enter password</p>
+              </span>
             )}
           </div>
 
           <div className="login-btn-container">
-            <Link to="/dashboard" className="btn btn-block sign-in-btn"></Link>
+            <button
+              onClick={handleSubmit}
+              className="btn btn-block sign-in-btn"
+            ></button>
 
             <hr
               style={{

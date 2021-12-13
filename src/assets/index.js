@@ -16,6 +16,7 @@ import { ReactComponent as Instagram } from "./instagram.svg";
 import { ReactComponent as Linkedin } from "./linkedin.svg";
 import { ReactComponent as LoginBg } from "./login-bg.svg";
 import { ReactComponent as LoginLogo } from "./login-logo.svg";
+import { ReactComponent as FormCheck } from "./form-check.svg";
 import { ReactComponent as Logo } from "./Logo.svg";
 import { ReactComponent as Menu } from "./menu.svg";
 import { ReactComponent as Payroll } from "./payroll.svg";
@@ -46,6 +47,7 @@ export {
   Employee,
   Facebook,
   FooterLogo,
+  FormCheck,
   Instagram,
   Linkedin,
   LoginBg,

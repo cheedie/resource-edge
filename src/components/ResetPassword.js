@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { LoginLogo, Error } from "../assets";
+import { useNavigate } from "react-router-dom";
+import { LoginLogo, FormCheck, Error } from "../assets";
 
 const ResetPassword = () => {
+  const [error, setError] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const navigate = useNavigate();
+
+  const validateEmail = (value) => {
+    const checker = /\S+@\S+\.\S+/;
+    if (checker.test(value)) {
+      setError(false);
+      setIsChecked(true);
+      setEmail("");
+    } else {
+      setIsChecked(false);
+    }
+  };
+
+  const handleSubmit = () => {
+    if (!error && isChecked) {
+      navigate("/recoverymail");
+    } else {
+      setError(true);
+    }
+  };
   return (
     <section className="login-container" style={{ paddingTop: "1rem" }}>
       <div className="login-title">
@@ -10,7 +35,7 @@ const ResetPassword = () => {
       </div>
       <div className="form-container" style={{ marginTop: "1.7rem" }}>
         <div className="form-title">
-          <h6 className="title">Reset Password</h6>
+          <h5 className="title">Reset Password</h5>
           <p className="paragraph-text" style={{ paddingBottom: "1rem" }}>
             To enable us reset your password, enter your email below
           </p>
@@ -25,21 +50,26 @@ const ResetPassword = () => {
               type="email"
               name="email"
               id=""
-              autoComplete="on"
+              onChange={(e) => validateEmail(e.target.value)}
               placeholder="Enter email"
-              className="form-input"
+              className={`form-input ${error ? "error" : ""}`}
             />
-            <span className="error-msg">
-              <Error text="" />
-              <p>Enter email address</p>
-            </span>
+            {isChecked && <FormCheck className="watch-icon" />}
+
+            {error && (
+              <span className="error-msg">
+                <Error />
+                <p>Enter email address</p>
+              </span>
+            )}
           </div>
 
           <div className="login-btn-container">
-            <Link
-              to="/recoverymail"
+            <button
+              disabled={error}
+              onClick={handleSubmit}
               className="btn btn-block sign-in-btn"
-            ></Link>
+            ></button>
 
             <hr
               style={{
