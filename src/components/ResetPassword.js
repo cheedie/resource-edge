@@ -6,7 +6,6 @@ import { LoginLogo, FormCheck, Error } from "../assets";
 const ResetPassword = () => {
   const [error, setError] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
-  const [email, setEmail] = useState("");
 
   const navigate = useNavigate();
 
@@ -15,7 +14,6 @@ const ResetPassword = () => {
     if (checker.test(value)) {
       setError(false);
       setIsChecked(true);
-      setEmail("");
     } else {
       setIsChecked(false);
     }
