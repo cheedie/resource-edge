@@ -375,6 +375,8 @@ Admin
   line-height: 16px;
   font-size: 12px;
   font-family: var(--fontFamilyMedium);
+  width: 12rem;
+  margin: auto;
 }
 
 /* 
@@ -794,6 +796,7 @@ Admin
     text-align: end;
     padding-top: 0;
     font-size: 16px;
+    width: auto;
   }
   .form-container {
     width: 90vw;
